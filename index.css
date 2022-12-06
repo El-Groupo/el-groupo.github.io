@@ -1,0 +1,108 @@
+/********************** Basics **********************/
+
+:root {
+    /* Navbar Title Color */
+    --color-primary: #ffffff;
+    /* Body Background Color*/
+    --color-secondary: #f0f2f3;
+    /* Navbar Icon Color */
+    --icon-color: #2d2d2d;
+    /* Navbar Icon Hover Color */
+    --color-accent: #fd6f53;
+    /* Body Text Color */
+    --font-color: #2d2d2d;
+    /* Box Shadow for the Navbar */
+    --shadow-depth: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--font-color);
+    padding-top: 5rem;
+    /* overflow-y: scroll; */
+}
+
+html {
+    background-color: var(--color-secondary);
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    ;
+}
+
+.navBar {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: var(--shadow-depth);
+    height: 4rem;
+    font-size: 1.75rem;
+}
+
+.pageContent,
+.navBar,
+.footer {
+    width: 65%;
+    padding: 0 17.5%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .pageContent,
+    .navBar,
+    .footer {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.pageContent {
+    padding-bottom: 1rem;
+}
+
+.navBar a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 1.25rem 0.5rem;
+}
+
+.navBar a:not(:last-child) {
+    margin-right: 0.2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navBtns {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .075rem;
+}
+
+.navBtns a:hover {
+    background-color: var(--color-secondary);
+    border-bottom: 2px solid seagreen;
+}
+
+.footer {
+    padding-top: 2.5rem;
+    bottom: 0;
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    overflow: hidden;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
